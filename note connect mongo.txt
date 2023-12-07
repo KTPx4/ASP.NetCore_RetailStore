@@ -1,0 +1,137 @@
+Nuget Connect to mongoDB: dotnet add package MongoDB.Driver
+Nuget use EF for mongoDb: dotnet add package MongoDB.EntityFrameworkCore --prerelease
+------------------------------------------------
+
+Program.cs: Config DbCOntext
+        //  "ConnectionStrings": {
+        //         "MongoDB": "mongodb+srv://kieuthanhphat20032018hdb:Ktp301814@px4k3db.l1uwqas.mongodb.net/?retryWrites=true&w=majority"
+        //        },
+        
+	 	var connectionString = builder.Configuration.GetConnectionString("MongoDB");          
+ 		builder.Services.AddDbContext<MyDataContext>(options => options.UseMongoDB(connectionString, "QT1")); // connectrionString, db name
+
+------------------------------------------------
+DataContext.cs - Entity Class: Example for create dataContext and Class Entity
+
+    using Microsoft.EntityFrameworkCore;
+    using MongoDB.Driver;
+    using MongoDB.EntityFrameworkCore.Extensions;   
+    public class MyDataContext :DbContext
+    {
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+
+        public static MyDataContext Create(IMongoDatabase database) =>
+        new(new DbContextOptionsBuilder<MyDataContext>()
+            .UseMongoDB(database.Client, database.DatabaseNamespace.DatabaseName)
+            .Options);
+
+        public MyDataContext(DbContextOptions options)
+            : base(options)
+        {
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Customer>().ToCollection("customers");
+            modelBuilder.Entity<Item>().ToCollection("Items");
+            modelBuilder.Entity<Order>().ToCollection("Orders");
+            modelBuilder.Entity<OrderDetail>().ToCollection("OrderDetails");
+        }
+
+    }
+    
+    // Entity Class
+    public class Customer
+    {
+        public ObjectId Id { get; set; }
+
+        public string CustName { get; set; }
+        public string Address { get; set; }
+    }
+
+------------------------------------------------
+Index.cshtml - Index.cshtml.cs: Example for using DBContext at Page Razor
+//Index.cshtml (View)
+    @page
+    @using NewQT1.Models;
+    @model IndexModel
+
+    @{
+        ViewData["Title"] = "Home page";
+    }
+    @inject MyDataContext _context
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach(Customer Cus in _context.Customers.ToList())
+            {
+                <tr>
+                    <td>@Cus.Id</td>
+                    <td>@Cus.CustName</td>
+                    <td>@Cus.Address</td>                
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Customer.CustName"></label>
+            <input asp-for="Customer.CustName" class="form-control" />
+            <span asp-validation-for="Customer.CustName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Customer.Address"></label>
+            <input asp-for="Customer.Address" class="form-control" />
+            <span asp-validation-for="Customer.Address" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+
+#########################################
+
+// Index.cshtml.cs (same Controller)
+    public class IndexModel : PageModel
+    {
+        private readonly ILogger<IndexModel> _logger;
+        private readonly MyDataContext _dbContext;
+        
+        [BindProperty]
+        public Customer Customer { get; set; }
+
+        public IndexModel(MyDataContext context)
+        {
+            _dbContext = context;
+        }
+        public IActionResult OnGet()
+        {
+            return Page();
+        }
+
+        public IActionResult OnPost()
+        {
+            if (Customer.CustName == null|| Customer.Address == null)
+            {
+                Console.WriteLine("Error");  
+                return Page();
+            }
+
+            _dbContext.Customers.Add(Customer);
+            _dbContext.SaveChanges();
+
+            return RedirectToPage("./Index");
+        }
+
+    }

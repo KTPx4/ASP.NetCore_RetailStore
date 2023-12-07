@@ -1,0 +1,37 @@
+﻿@page
+@using Final.Models;
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@inject MyDataContext _DbContext;
+
+<div class="text-center">
+    <h4>List Test Account</h4>
+</div>
+
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>User</th>
+            <th>Role</th>
+            <th>Is First Login</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var acc in _DbContext.Accounts.ToList())
+        {
+            <tr>
+                <td>@acc.fullName</td>
+                <td>@acc.Email</td>
+                <td>@acc.User</td>
+                <td>@acc.Role</td>
+                <td>@acc.firstLogin</td>
+            </tr>
+        }
+      
+      
+    </tbody>
+</table>
