@@ -1291,24 +1291,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\px4vn\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages": {}
+    "C:\\Users\\konod\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\TDTU  - University\\HK5\\net\\.net\\LT\\Final\\Code\\FinalDotNet\\Final\\Final.csproj",
+      "projectUniqueName": "D:\\hk1 năm 3\\net technology\\final C#\\FinalDotNet\\Final\\Final.csproj",
       "projectName": "Final",
-      "projectPath": "F:\\TDTU  - University\\HK5\\net\\.net\\LT\\Final\\Code\\FinalDotNet\\Final\\Final.csproj",
-      "packagesPath": "C:\\Users\\px4vn\\.nuget\\packages\\",
-      "outputPath": "F:\\TDTU  - University\\HK5\\net\\.net\\LT\\Final\\Code\\FinalDotNet\\Final\\obj\\",
+      "projectPath": "D:\\hk1 năm 3\\net technology\\final C#\\FinalDotNet\\Final\\Final.csproj",
+      "packagesPath": "C:\\Users\\konod\\.nuget\\packages\\",
+      "outputPath": "D:\\hk1 năm 3\\net technology\\final C#\\FinalDotNet\\Final\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages"
+        "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\px4vn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\konod\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.1.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1317,6 +1320,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\DevExpress 23.1\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
