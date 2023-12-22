@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\TDTU  - University\\HK5\\net\\.net\\LT\\Final\\Code\\FinalDotNet\\Final\\Final.csproj": {}
+    "F:\\TDTU  - University\\HK5\\net\\.net\\LT\\Final\\Codev2\\FinalDotNet\\Final\\Final.csproj": {}
   },
   "projects": {
-    "F:\\TDTU  - University\\HK5\\net\\.net\\LT\\Final\\Code\\FinalDotNet\\Final\\Final.csproj": {
+    "F:\\TDTU  - University\\HK5\\net\\.net\\LT\\Final\\Codev2\\FinalDotNet\\Final\\Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\TDTU  - University\\HK5\\net\\.net\\LT\\Final\\Code\\FinalDotNet\\Final\\Final.csproj",
+        "projectUniqueName": "F:\\TDTU  - University\\HK5\\net\\.net\\LT\\Final\\Codev2\\FinalDotNet\\Final\\Final.csproj",
         "projectName": "Final",
-        "projectPath": "F:\\TDTU  - University\\HK5\\net\\.net\\LT\\Final\\Code\\FinalDotNet\\Final\\Final.csproj",
+        "projectPath": "F:\\TDTU  - University\\HK5\\net\\.net\\LT\\Final\\Codev2\\FinalDotNet\\Final\\Final.csproj",
         "packagesPath": "C:\\Users\\px4vn\\.nuget\\packages\\",
-        "outputPath": "F:\\TDTU  - University\\HK5\\net\\.net\\LT\\Final\\Code\\FinalDotNet\\Final\\obj\\",
+        "outputPath": "F:\\TDTU  - University\\HK5\\net\\.net\\LT\\Final\\Codev2\\FinalDotNet\\Final\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages"
@@ -45,6 +45,18 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "BCrypt.Net-Core": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.22.0, )"
@@ -52,6 +64,10 @@
             "MongoDB.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.0-preview.1, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.3.2, )"
             }
           },
           "imports": [
