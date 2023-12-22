@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RzXHyStYt1t3m6BqR8yN0tY7IyEd4ZfjlJV9DzO20cY=",
+  "Hash": "zH5KefKtfhlbq1Z7wU5TVvtKr5No5uO+/lNP2NgsqFE=",
   "Source": "Final",
   "BasePath": "_content/Final",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\hk1 năm 3\\net technology\\final C#\\FinalDotNet\\Final\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Final.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\hk1 năm 3\\net technology\\final C#\\FinalDotNet\\Final\\wwwroot\\css\\ProductCard.css",
+      "SourceId": "Final",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\hk1 năm 3\\net technology\\final C#\\FinalDotNet\\Final\\wwwroot\\",
+      "BasePath": "_content/Final",
+      "RelativePath": "css/ProductCard.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\ProductCard.css"
     },
     {
       "Identity": "D:\\hk1 năm 3\\net technology\\final C#\\FinalDotNet\\Final\\wwwroot\\css\\site.css",
