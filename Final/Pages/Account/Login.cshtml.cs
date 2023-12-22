@@ -37,35 +37,50 @@ namespace Final.Pages.Account
 
         public async Task<ActionResult> OnPost(string user, string password)
         {
-            UserName = user;
-            Password = password;
-
-            if (UserName == null)
-            {
-                ErrorMess = "User Name must have value!";
-            }
-            else if (Password == null)
-            {
-                ErrorMess = "Password must have value!";
-            }
-            else
+            try
             {
 
+                UserName = user;
+                Password = password;
 
-
-                var account = _dbContext.Accounts.FirstOrDefault(x => x.User.ToLower() == UserName.ToLower());
-                if (account == null || !BCrypt.Net.BCrypt.Verify(Password, account.Password))
+                if (UserName == null)
                 {
-                    ErrorMess = "Account or Password is not Correct";
+                    ErrorMess = "User Name must have value!";
                 }
-                else 
+                else if (Password == null)
                 {
+                    ErrorMess = "Password must have value!";
+                }
+                else
+                {
+                    var account = _dbContext.Accounts.FirstOrDefault(x => x.User.ToLower() == UserName.ToLower());
+                    Claim firtLogin = new Claim("firstLogin", false.ToString()); ;
+                    if (account == null || !BCrypt.Net.BCrypt.Verify(Password, account.Password))
+                    {
+                        ErrorMess = "Account or Password is not Correct";
+                        return Page();
+                    }
+                    else if (account.isDeleted)
+                    {
+                        ErrorMess = "Your Account was blocked. Please contact to Manager!";
+                        return Page();
+                    }
+                    else if(!account.isActive)
+                    {
+                        ErrorMess = "Please active your account by link in email";
+                        return Page();
+                    }
+                    else if (account.firstLogin)
+                    {
+                        firtLogin = new Claim("firstLogin", account?.firstLogin.ToString());
+                    }
+
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Name, account.fullName),
                         new Claim(ClaimTypes.Email, account.Email),
-                        new Claim(ClaimTypes.Role, account.Role)
-                        // Thêm các claim khác nếu cần
+                        new Claim(ClaimTypes.Role, account.Role),
+                        firtLogin
                     };
 
                     var claimsIdentity = new ClaimsIdentity(claims, "Cookies");
@@ -75,17 +90,53 @@ namespace Final.Pages.Account
                     await HttpContext.SignInAsync("Cookies", claimsPrincipal);
 
                     return RedirectToPage("/Index"); // Chuyển hướng đến trang chính
+
                 }
+
+                return Page();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error at login - onpost -> " + ex);
+                return Page();
+            }
+
+        }
+
+        public IActionResult OnGet()
+        {
+            try
+            {
+                if (User.Identity.IsAuthenticated)
+                {
+                    // Nếu đã đăng nhập, chuyển hướng đến trang chính
+                    return Redirect("/");
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Error at login - OnGet -> " + ex);
+
             }
 
             return Page();
         }
 
-     
         public IActionResult OnGetLogout()
         {
-            HttpContext.SignOutAsync();
-            return RedirectToAction("Index");
+           
+            try
+            {
+                HttpContext.SignOutAsync();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error at Logout - OnGet -> " + ex);
+                return Redirect("/");
+            }
+
+           
         }
     }
 }
