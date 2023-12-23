@@ -10844,11 +10844,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\hk1 năm 3\\net technology\\final C#\\Final\\Final.csproj",
+      "projectUniqueName": "D:\\hk1 năm 3\\net technology\\FinalDotNet\\Final\\Final.csproj",
       "projectName": "Final",
-      "projectPath": "D:\\hk1 năm 3\\net technology\\final C#\\Final\\Final.csproj",
+      "projectPath": "D:\\hk1 năm 3\\net technology\\FinalDotNet\\Final\\Final.csproj",
       "packagesPath": "C:\\Users\\konod\\.nuget\\packages\\",
-      "outputPath": "D:\\hk1 năm 3\\net technology\\final C#\\Final\\obj\\",
+      "outputPath": "D:\\hk1 năm 3\\net technology\\FinalDotNet\\Final\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 23.1\\Components\\Offline Packages",

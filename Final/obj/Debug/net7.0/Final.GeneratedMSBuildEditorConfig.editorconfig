@@ -9,57 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Final
 build_property.RootNamespace = Final
-build_property.ProjectDir = D:\hk1 năm 3\net technology\final C#\Final\
+build_property.ProjectDir = D:\hk1 năm 3\net technology\FinalDotNet\Final\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\hk1 năm 3\net technology\final C#\Final
+build_property.MSBuildProjectDirectory = D:\hk1 năm 3\net technology\FinalDotNet\Final
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/hk1 năm 3/net technology/final C\#/Final/Pages/Error.cshtml]
+[D:/hk1 năm 3/net technology/FinalDotNet/Final/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hk1 năm 3/net technology/final C\#/Final/Pages/Index.cshtml]
+[D:/hk1 năm 3/net technology/FinalDotNet/Final/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hk1 năm 3/net technology/final C\#/Final/Pages/Product_Page/Create.cshtml]
+[D:/hk1 năm 3/net technology/FinalDotNet/Final/Pages/Product_Page/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdF9QYWdlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hk1 năm 3/net technology/final C\#/Final/Pages/Product_Page/Delete.cshtml]
+[D:/hk1 năm 3/net technology/FinalDotNet/Final/Pages/Product_Page/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdF9QYWdlXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hk1 năm 3/net technology/final C\#/Final/Pages/Product_Page/Details.cshtml]
+[D:/hk1 năm 3/net technology/FinalDotNet/Final/Pages/Product_Page/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdF9QYWdlXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hk1 năm 3/net technology/final C\#/Final/Pages/Product_Page/Edit.cshtml]
+[D:/hk1 năm 3/net technology/FinalDotNet/Final/Pages/Product_Page/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdF9QYWdlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hk1 năm 3/net technology/final C\#/Final/Pages/Product_Page/Index.cshtml]
+[D:/hk1 năm 3/net technology/FinalDotNet/Final/Pages/Product_Page/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdF9QYWdlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hk1 năm 3/net technology/final C\#/Final/Pages/Product_Page/Indexd.cshtml]
+[D:/hk1 năm 3/net technology/FinalDotNet/Final/Pages/Product_Page/Indexd.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdF9QYWdlXEluZGV4ZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hk1 năm 3/net technology/final C\#/Final/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/hk1 năm 3/net technology/FinalDotNet/Final/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hk1 năm 3/net technology/final C\#/Final/Pages/_ViewImports.cshtml]
+[D:/hk1 năm 3/net technology/FinalDotNet/Final/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hk1 năm 3/net technology/final C\#/Final/Pages/_ViewStart.cshtml]
+[D:/hk1 năm 3/net technology/FinalDotNet/Final/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/hk1 năm 3/net technology/final C\#/Final/Pages/Shared/_Layout.cshtml]
+[D:/hk1 năm 3/net technology/FinalDotNet/Final/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-sii77siz6d

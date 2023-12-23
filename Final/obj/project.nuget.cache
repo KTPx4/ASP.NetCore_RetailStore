@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SZIyIErvHMTI/4CzjaXCH2RGfVC6rJtZdTcOc978FcNn+s2DRcG6F40+96UxwrVJqnvkzmlhET7dWWS4Ux0kjQ==",
+  "dgSpecHash": "PDHiW7kUihOLdWw8j34AtTIeqtT+iHXiAnJSZEPE5Ezhg882sdyPko5qZi9s6lxA2pALTFI3bl42WBzv0W7jXw==",
   "success": true,
-  "projectFilePath": "D:\\hk1 năm 3\\net technology\\final C#\\Final\\Final.csproj",
+  "projectFilePath": "D:\\hk1 năm 3\\net technology\\FinalDotNet\\Final\\Final.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\konod\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\konod\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

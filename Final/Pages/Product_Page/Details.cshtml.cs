@@ -23,11 +23,11 @@ namespace Final.Pages.Product_Page
 
         public async Task<IActionResult> OnGetAsync(ObjectId id)
         {
+
             if (id == null || _context.Products == null)
             {
                 return NotFound();
             }
-
             var product = await _context.Products.FirstOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {
