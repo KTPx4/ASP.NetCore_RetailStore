@@ -1,0 +1,85 @@
+﻿@page
+@model Final.Pages.Account.ProfileModel
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery">
+    </script>
+    <link rel="stylesheet" type="text/css" href="~/css/account/profile.css" />
+    <script src="~/js/account/profile.js"></script>
+</head>
+
+@if(Model.ErrorMess != null)
+{
+    <div id="errAlert" class="text-center alert alert-warning fade show" role="alert">
+       @Model.ErrorMess
+    </div>
+}
+@if(Model.SuccessMess != null)
+{
+    <div id="errAlert" class=" text-center alert alert-success fade show" role="alert">
+        @Model.SuccessMess
+    </div>
+}
+
+<div id="loading" class="mt-1 text-center sniping d-none">
+    <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+<aside class="profile-card">
+    <form id="FormProfile" class="login" method="post" enctype="multipart/form-data">
+    <header>
+
+        <!-- here’s the avatar -->
+        <div class="text-center mb-3">
+            <label for="imageInput">
+                <img id="profileImagePreview" src="~/public/account/img/@ViewData["NameAvt"]?im=11" className="img hoverZoomLink" />
+            </label>
+            <input id="imageInput"
+                   type="file"
+                   accept="image/*"
+                   name="profileImage" />
+            </div>
+        <!-- the username -->
+        <h1>
+            @ViewData["UserEmail"]
+        </h1>
+
+        <!-- and role or location -->
+        <h2 class="sub-title">
+            @ViewData["UserRole"]
+        </h2>
+
+    </header>
+
+    <!-- bit of a bio; who are you? -->
+    <div class="profile-bio">    
+
+      
+            @* form input  *@
+            <input value="@ViewData["UserName"]" id="i-fullName" class="input-value" type="text" name="fullName" placeholder="Full Name" />
+            <input id="i-oldPass" type="password" name="oldPass" placeholder="Old Password" class="mt-3 input-value" />
+
+            <input id="i-newPass" type="password" name="newPass" placeholder="New Password" class="mb-3 mt-3 input-value" />
+            <input class ="input-value" id="i-confirmPass" type="password" name="confirmPass" placeholder="Confirm Password" />
+            <br />                
+            <button type="submit" class="mt-4 btn btn-outline-warning" >
+                <p class="h-50" style="float: right;">Save</p>
+            </button>
+
+      
+
+
+
+        
+    </div>
+    </form>
+
+</aside>
+
