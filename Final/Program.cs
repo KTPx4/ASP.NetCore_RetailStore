@@ -1,7 +1,10 @@
-﻿using Final.Models;
+﻿using Final.Middleware;
+using Final.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
@@ -12,12 +15,7 @@ namespace Final
        
         public static void Main(string[] args)
         {
-            var SECRET_KEY_LOGIN = "Auth-Login";
-
-            var keyBytes = Encoding.UTF8.GetBytes(SECRET_KEY_LOGIN.PadRight(32));
-            var SecurityKey = new SymmetricSecurityKey(keyBytes);
-
-
+           
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -33,11 +31,11 @@ namespace Final
                 });
 
 
+
             var connectionString = builder.Configuration.GetConnectionString("MongoDB");
             Console.WriteLine(connectionString);
             builder.Services.AddDbContext<MyDataContext>(options => options.UseMongoDB(connectionString, "FinalNodejs")); // connectrionString, db name
 
-            // add authentication - jwt
           
 
 
@@ -55,9 +53,12 @@ namespace Final
 
             app.UseRouting();
 
+
             app.UseAuthentication(); // Use Authentication
             app.UseAuthorization();
-            
+
+            app.UseMiddleware<FirstLoginMiddleware>();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
