@@ -11,9 +11,11 @@
     using System.Security.Claims;
     using System.IO;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Final.Pages.Account
 {
+        [Authorize]
         public class ProfileModel : PageModel
         {
             private readonly Final.Models.MyDataContext _context;
@@ -61,15 +63,15 @@ namespace Final.Pages.Account
                     // Nếu không tồn tại, sao chép từ tệp mẫu "user.png"
                     // Save the image
 
-                    string defaultImagePath = Path.Combine("wwwroot", "public", "account", "img", "user.png");
-                    string destinationPath = Path.Combine(ImgUrl);
+                        string defaultImagePath = Path.Combine("wwwroot", "public", "account", "img", "user.png");
+                        string destinationPath = Path.Combine(ImgUrl);
 
-                    using (var sourceStream = new FileStream(defaultImagePath, FileMode.Open))
-                    using (var destinationStream = new FileStream(destinationPath, FileMode.Create))
-                    {
-                        await sourceStream.CopyToAsync(destinationStream);
+                        using (var sourceStream = new FileStream(defaultImagePath, FileMode.Open))
+                        using (var destinationStream = new FileStream(destinationPath, FileMode.Create))
+                        {
+                            await sourceStream.CopyToAsync(destinationStream);
+                        }
                     }
-                }
                 }
 
                 ErrorMess = TempData["ErrorMess"]?.ToString();
