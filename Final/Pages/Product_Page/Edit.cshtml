@@ -1,0 +1,161 @@
+﻿@page
+@model Final.Pages.Product_Page.EditModel
+
+
+<h1>Edit Product</h1>
+<hr />
+
+        @* <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Product.Id" />
+            <div class="form-group">
+                <label asp-for="Product.BarCode" class="control-label"></label>
+                <input asp-for="Product.BarCode" class="form-control" />
+                <span asp-validation-for="Product.BarCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.ProductName" class="control-label"></label>
+                <input asp-for="Product.ProductName" class="form-control" />
+                <span asp-validation-for="Product.ProductName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.OriginPrice" class="control-label"></label>
+                <input asp-for="Product.OriginPrice" class="form-control" />
+                <span asp-validation-for="Product.OriginPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.DisplayPrice" class="control-label"></label>
+                <input asp-for="Product.DisplayPrice" class="form-control" />
+                <span asp-validation-for="Product.DisplayPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Category" class="control-label"></label>
+                <input asp-for="Product.Category" class="form-control" />
+                <span asp-validation-for="Product.Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.Description" class="control-label"></label>
+                <input asp-for="Product.Description" class="form-control" />
+                <span asp-validation-for="Product.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.linkImg" class="control-label"></label>
+                <input asp-for="Product.linkImg" class="form-control" />
+                <span asp-validation-for="Product.linkImg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.CreateAt" class="control-label"></label>
+                <input asp-for="Product.CreateAt" class="form-control" />
+                <span asp-validation-for="Product.CreateAt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form> *@
+<form method="post" class="row" enctype="multipart/form-data">
+ <div class="col-md-12 text-center mb-4">
+        <div class="image-container">
+            <img src="@Model.ImageUrl" class="img-fluid rounded" alt="Product Image" style="width: 300px; height: 200px;">
+        </div>
+    </div>
+
+    <!-- Left Column - First 4 Fields -->
+    <div class="col-md-6">
+        <div class="form-group">
+            <label asp-for="Product.BarCode" class="control-label"></label>
+            <input asp-for="Product.BarCode" class="form-control" />
+            <span asp-validation-for="Product.BarCode" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.ProductName" class="control-label"></label>
+            <input asp-for="Product.ProductName" class="form-control" />
+            <span asp-validation-for="Product.ProductName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.OriginPrice" class="control-label"></label>
+            <input asp-for="Product.OriginPrice" class="form-control" />
+            <span asp-validation-for="Product.OriginPrice" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Product.DisplayPrice" class="control-label"></label>
+            <input asp-for="Product.DisplayPrice" class="form-control" />
+            <span asp-validation-for="Product.DisplayPrice" class="text-danger"></span>
+        </div>
+    </div>
+
+    <!-- Right Column - Last 3 Fields -->
+    <div class="col-md-6">
+        <div class="form-group">
+            <label asp-for="Product.Description" class="control-label"></label>
+            <textarea asp-for="Product.Description" class="form-control"></textarea>
+            <span asp-validation-for="Product.Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-4 col-form-label">Image</label>
+            <div class="col-sm-8">
+                <input class="form-control" asp-for="linkImgFileName" />
+                <span asp-validation-for="linkImgFileName" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group mb-5 mx-2">
+            <label class="control-label">Category</label>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Select Categories
+                </button>
+                <div class="dropdown-menu" aria-labelledby="categoryDropdown">
+                    <!-- Categories Checkboxes -->
+                  <div class="dropdown-item">
+                        <input type="checkbox" name="CheckBoxList" value="Laptops" data-category="Category 1" checked='@Model.CategoryString.Contains("Laptops")' />
+                        <label for="category1">Laptops</label>
+                    </div>
+                    <div class="dropdown-item">
+                        <input type="checkbox" name="CheckBoxList" value="Desktop Computers" data-category="Category 2" checked='@Model.CategoryString.Contains("Laptops")' />
+                        <label for="category2">Desktop Computers</label>
+                    </div>
+                    <div class="dropdown-item">
+                        <input type="checkbox" name="CheckBoxList" value="Tablets" data-category="Category 3" checked='@Model.CategoryString.Contains("Laptops")' />
+                        <label for="category3">Tablets</label>
+                    </div>
+                    <div class="dropdown-item">
+                        <input type="checkbox" name="CheckBoxList" value="Smartphones" data-category="Category 4" checked='@Model.CategoryString.Contains("Laptops")' />
+                        <label for="category4">Smartphones</label>
+                    </div>
+                    <div class="dropdown-item">
+                        <input type="checkbox" name="CheckBoxList" value="Audio Devices" data-category="Category 5" checked='@Model.CategoryString.Contains("Laptops")' />
+                        <label for="category5">Audio Devices</label>
+                    </div>
+                    <!-- Add more categories as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="col-md-12 text-center mt-2">
+        <div class="form-group mx-auto">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </div>
+
+    <!-- Hidden Fields -->
+    <input type="hidden" asp-for="Product.Id" />
+    <input type="hidden" asp-for="Product.Category" value="DefaultValueForCategory" />
+    <input type="hidden" asp-for="Product.linkImg" value="DefaultValueForLinkImg" />
+    <input type="hidden" asp-for="Product.CreateAt" value="@DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss")" />
+</form>
+
+
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
