@@ -1,20 +1,24 @@
-using Final.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Final.Models;
 
 namespace Final.Pages.Product_Page
 {
-    public class IndexModel : PageModel
+    public class IndexModel2 : PageModel
     {
         private readonly Final.Models.MyDataContext _context;
 
-        public IndexModel(Final.Models.MyDataContext context)
+        public IndexModel2(Final.Models.MyDataContext context)
         {
             _context = context;
         }
 
-        public IList<Product> Product { get; set; } = default!;
+        public IList<Product> Product { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
@@ -23,6 +27,5 @@ namespace Final.Pages.Product_Page
                 Product = await _context.Products.ToListAsync();
             }
         }
-     
     }
 }
