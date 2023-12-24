@@ -12,6 +12,7 @@ namespace Final.Models
     public class Product
     {
         // id for the drop down bar 
+     
         public ObjectId Id { get; set; }
 
 
@@ -20,7 +21,7 @@ namespace Final.Models
         public int OriginPrice { get; set; }
         public int DisplayPrice { get; set; }
         // seperate category type 
-        public List<string> Category { get; set; }
+        public string[] Category { get; set; }
         // seperate des type 
         public string Description { get; set; }
 

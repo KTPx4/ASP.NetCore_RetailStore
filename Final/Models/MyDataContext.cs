@@ -20,11 +20,8 @@ namespace Final.Models
 
         }
         public DbSet<Account> Accounts { get; set; }
-        //public static MyDataContext Create(IMongoDatabase database) =>
-        //new(new DbContextOptionsBuilder<MyDataContext>()
-        //    .UseMongoDB(database.Client, database.DatabaseNamespace.DatabaseName)
-        //    .Options);
-        
+
+
         public DbSet<Final.Models.Product> Product { get; set; } = default!;
 
     }
