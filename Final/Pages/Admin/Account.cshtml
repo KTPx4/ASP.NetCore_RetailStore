@@ -1,0 +1,218 @@
+﻿@page
+@model Final.Pages.Admin.AccountModel
+@{
+	Layout = null;
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash Board</title>
+    
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/account/admin.css?cs=1" />
+
+    <!-- Add any additional head elements as needed -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Final.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/js/account/admin.js"></script>
+
+</head>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+	<!-- Modal content -->
+	<div class="modal-content">
+		
+		<div class="modal-header d-flex justify-content-center">
+			<h4 class="text-center">Create Employee</h4>
+		@* 	<div class="text-end btn-closing">
+				<span class="close">&times;</span>
+			</div> *@
+		</div>
+		<form method="post" asp-page-handler="CreateAccount" id="formAdd">
+			<div class="modal-body d-grid">
+				<input id="i-name" class="modal-add-i i-fullname" name="FullName" type="text" asp-for="newAccount.FullName" placeholder="Full Name"/>
+				<input id="i-email"  class="modal-add-i i-email" name="Email" type="text" asp-for="newAccount.Email" placeholder="Email" />
+			</div>
+			<div >
+				<div id="modal-add-err" class="alert alert-warning d-none">Email Null</div>
+			</div>
+			<div class="modal-foot d-flex justify-content-end" >
+				<button type="submit" id="modal-add-save" class="btn btn-success modal-add-btn">Add</button>
+				<button class="btn btn-warning close modal-add-btn">Close</button>
+			</div>
+
+		</form>
+	</div>
+</div>
+
+
+<div class="app">
+	<!-- Hiển thị thông báo lỗi nếu có -->
+	@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+	{	
+		<div id="alert-err" class="text-center alert alert-warning " role="alert">
+			@Model.ErrorMessage
+		</div>
+	}
+	@if (!string.IsNullOrEmpty(Model.SuccessMessage))
+	{
+		<div id="alert-succ" class="text-center alert alert-success " role="alert">
+			@Model.SuccessMessage
+		</div>
+	}
+
+
+	<header class="app-header">
+
+
+		<div class="app-header-logo">
+			<a href="/" style="text-decoration: none">
+				<div class="logo">
+					<span class="logo-icon">
+						<img src="~/favicon.ico" />
+					</span>
+					<h1 class="logo-title">
+						<span>Final</span>
+						<span>DotNet</span>
+					</h1>
+				</div>
+			</a>
+		</div>
+		<div class="app-header-navigation">
+			<div class="tabs">
+				<a href="#" class="active">
+					Account
+				</a>				
+			</div>
+		</div>
+		<div class="app-header-actions">
+			<button class="user-profile">
+				<span>@Model.User.fullName</span>
+				<span>
+					<img src="~/public/account/img/@Model.User.Id.ToString()/@Model.User.NameAvt" />
+				</span>
+			</button>
+			
+		</div>
+		<div class="app-header-mobile">
+			<button class="icon-button large">
+				<i class="ph-list"></i>
+			</button>
+		</div>
+
+	</header>
+		
+	<div class="app-body">
+		<div class="app-body-navigation">
+			<nav class="navigation">
+				<a href="/">				
+					<span>Home</span>
+				</a>		
+				<a href="/product/manage">
+				
+					<span>Manage Product</span>
+				</a>
+				<a href="/admin/account">
+				
+					<span>Manage Account</span>
+				</a>
+				
+				<a href="/account/profile">
+					<span>Profile</span>
+				</a>
+				 <button class="mt-3 btn-login btn btn-outline-light" >
+                        <a class="nav-link text-dark" asp-area="" asp-page="/account/login" asp-page-handler="Logout">LogOut</a>
+                </button>
+			</nav>
+			
+		</div>
+		<div class="app-body-main-content">
+			<section class="service-section">
+				<h2 class="text-light">Search</h2>
+				<div class="service-section-header">
+					<form method="post" class=" formSearch">
+						<div class="search-field">
+							<i class="ph-magnifying-glass"></i>
+							<input type="text" asp-for="SearchText" placeholder="Name, ID, Email">
+						</div>
+						<button type="submit" class="flat-button">
+							Search
+						</button>
+					</form>
+				</div>
+			
+			</section>
+			<section class="transfer-section">
+				<div class="transfer-section-header">
+					<h2 class="text-light">List Account</h2>
+					<div class="filter-options">
+						<p>@Model.Accounts.Count People</p>
+						<button class="icon-button bg-success" >
+							<i class="ph-funnel">+</i>
+						</button>
+					</div>
+				</div>
+				<div class="transfers list-body">
+					 @foreach (var account in Model.Accounts)
+					{
+						<div class="transfer">
+							<img class="transfer-logo" src="~/public/account/img/@account.Id.ToString()/@account.NameAvt" />
+							@* <div class="transfer-logo">
+							</div> *@
+							<dl class="transfer-details">
+								<div>
+									<dt class=" text-User">@account.User</dt>
+									<dd class=" text-details text-email">@account.Email</dd>
+								</div>
+								<div>
+									<dt class="text-name">Full Name</dt>
+									<dd class="text-details">@account.fullName</dd>
+								</div>
+								<div>
+									<dt class="text-name">Status</dt>
+									<dd class="text-details">
+										@if (account.isDeleted)
+										{
+											<span class="text-danger">Blocked</span>
+										}
+										else if (!account.isActive)
+										{
+											<span class="text-warning">Non-Active</span>
+										}
+										else
+										{
+											<span class="text-success">Active</span>
+										}
+									</dd>
+								</div>
+							</dl>
+							<div class="transfer-account-action">
+								<button class="btn-action bg-primary">View</button>
+								<button class="btn-action bg-success">Send Mail</button>
+								@if (account.isDeleted)
+								{
+									
+									<button class="btn-action btn-lock bg-light">UnBlock</button>
+								}
+								else
+								{
+									<button class="btn-action btn-lock bg-warning">Block</button>
+
+								}
+
+							</div>
+						</div>
+					
+						
+					}
+				</div>
+			</section>
+		</div>
+	
+	</div>
+</div>
+
