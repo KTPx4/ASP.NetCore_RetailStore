@@ -1,0 +1,55 @@
+﻿@page
+@model Final.Pages.Account.ActiveModel
+@{
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Account</title>
+    <link rel="stylesheet" type="text/css" href="~/css/account/active.css" />
+
+    <!-- Add any additional head elements as needed -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Final.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+    @if (Model.TypeSuccess)
+    {
+        <div id="container">
+            <div id="success-box">
+                <div class="dot"></div>
+                <div class="dot two"></div>
+                <div class="face">
+                    <div class="eye"></div>
+                    <div class="eye right"></div>
+                    <div class="mouth happy"></div>
+                </div>
+                <div class="shadow scale"></div>
+                <div class="message"><h1 class="alert">Success!</h1><p>@Model.Message</p></div>
+                @* <button class="button-box">continue</button> *@
+            </div>
+        </div>
+
+    }
+    else
+    {
+        <div id="container">
+            <div id="error-box">
+                <div class="dot"></div>
+                <div class="dot two"></div>
+                <div class="face2">
+                    <div class="eye"></div>
+                    <div class="eye right"></div>
+                    <div class="mouth sad"></div>
+                </div>
+                <div class="shadow move"></div>
+                <div class="message"><h1 class="alert">Error!</h1><p>@Model.Message</div>
+                @* <button class="button-box">try again</button> *@
+            </div>
+        </div>        
+    }
+

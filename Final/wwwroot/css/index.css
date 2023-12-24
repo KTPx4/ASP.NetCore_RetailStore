@@ -1,0 +1,37 @@
+html body{
+    background-color: rgb(45,45,45);
+}
+
+.navbar{
+    background: radial-gradient(circle at left, #b8cecf, #867e89);
+}
+
+.btn-login{
+    height: 35px;
+    width:  75px;
+    border: 1px solid rgb(88, 179, 202);
+    background-color: transparent;
+    border-radius: 20px;
+    padding: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-login:hover {
+    
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(24, 167, 192);
+    
+}
+.btn-login a{
+    color: rgb(185, 245, 230) !important; 
+}
+.btn-login:hover a{
+    color: rgb(255, 255, 255) !important; 
+}
+.text-navbar{
+    font-weight: 550 !important;
+}
+.text-navbar:hover{
+    color: rgb(236, 37, 130) !important;
+}
