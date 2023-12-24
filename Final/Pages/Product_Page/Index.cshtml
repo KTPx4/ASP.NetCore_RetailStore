@@ -8,7 +8,8 @@
             <h2 class="text-primary">Product List</h2>
         </div>
         <div class="col-md-3 text-center">
-            <a asp-page="createmodel" class="btn btn-primary">
+           
+            <a asp-page="Create" class="btn btn-primary">
                 <i class="bi bi-plus-square"></i> &nbsp; Create new product 
             </a>
         </div>
@@ -66,8 +67,90 @@
                 </div>
             </div>
         </div>
+        @foreach (var product in Model.Product)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <!-- Card Image -->
+                    <img src="@product.linkImg" class="card-img-top" alt="Product Image">
 
-        <div class="col-md-4">
+                    <!-- Card Body -->
+                        <div class="card-body">
+                                <h5 class="card-title">@product.ProductName</h5>
+
+                              @*   <!-- Description Accordion -->
+                                <div class="accordion" id="descriptionAccordion_@product.Id">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingDescription_@product.Id">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDescription_@product.Id" aria-expanded="false" aria-controls="collapseDescription_@product.Id">
+                                                Description
+                                            </button>
+                                        </h2>
+                                        <div id="collapseDescription_@product.Id" class="accordion-collapse collapse" aria-labelledby="headingDescription_@product.Id" data-bs-parent="#descriptionAccordion_@product.Id">
+                                            <div class="accordion-body">
+                                        @product.Description
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> *@
+
+                            </div>
+
+                    <!-- List Group -->
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Barcode: @product.BarCode</li>
+                        <li class="list-group-item">Origin Price: @product.OriginPrice</li>
+                        <li class="list-group-item">Display Price: @product.DisplayPrice</li>
+                    </ul>
+                        
+
+                    <!-- Categories Accordion -->
+                    <div class="accordion" id="categoriesAccordion_@product.Id">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingCategories_@product.Id">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCategories_@product.Id" aria-expanded="false" aria-controls="collapseCategories_@product.Id">
+                                    Categories
+                                </button>
+                            </h2>
+                            <div id="collapseCategories_@product.Id" class="accordion-collapse collapse" aria-labelledby="headingCategories_@product.Id" data-bs-parent="#categoriesAccordion_@product.Id">
+                                <div class="accordion-body">
+                                    <ul>
+                                        @foreach (var category in product.Category)
+                                        {
+                                                <li>@category</li>
+                                        }
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                             <div class="accordion" id="descriptionAccordion_@product.Id">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingDescription_@product.Id">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDescription_@product.Id" aria-expanded="false" aria-controls="collapseDescription_@product.Id">
+                                                Description
+                                            </button>
+                                        </h2>
+                                        <div id="collapseDescription_@product.Id" class="accordion-collapse collapse" aria-labelledby="headingDescription_@product.Id" data-bs-parent="#descriptionAccordion_@product.Id">
+                                            <div class="accordion-body">
+                                        @product.Description
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+
+                    <!-- Card Body with Links -->
+                    <div class="card-body">
+                            <div class="btn-group" role="group" aria-label="Item Actions">
+                            <a class="btn btn-warning" asp-page="./Edit" asp-route-id="@product.Id">Edit</a>
+                                <a class="btn btn-info" asp-page="./Details" asp-route-id="@product.Id">Details</a>
+                                <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@product.Id">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+       @*  <div class="col-md-4">
             <div class="card mb-4">
                 <!-- Card Image -->
                 <img src="..." class="card-img-top" alt="...">
@@ -189,7 +272,7 @@
                     <a href="#" class="card-link">Another link</a>
                 </div>
             </div>
-        </div>
+        </div> *@
 
         <!-- Add more col-md-4 divs for additional cards as needed -->
     </div>
