@@ -52,10 +52,11 @@
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form> *@
+<div asp-validation-summary="All"></div>
 <form method="post" class="row" enctype="multipart/form-data">
  <div class="col-md-12 text-center mb-4">
         <div class="image-container">
-            <img src="@Model.ImageUrl" class="img-fluid rounded" alt="Product Image" style="width: 300px; height: 200px;">
+            <img src="@Model.Product.linkImg" class="img-fluid rounded" alt="Product Image" style="width: 300px; height: 200px;">
         </div>
     </div>
 
@@ -111,23 +112,23 @@
                 <div class="dropdown-menu" aria-labelledby="categoryDropdown">
                     <!-- Categories Checkboxes -->
                   <div class="dropdown-item">
-                        <input type="checkbox" name="CheckBoxList" value="Laptops" data-category="Category 1" checked='@Model.CategoryString.Contains("Laptops")' />
+                        <input type="checkbox" name="CategoryString" value="Laptops" data-category="Category 1" checked='@Model.CategoryString.Contains("Laptops")' />
                         <label for="category1">Laptops</label>
                     </div>
                     <div class="dropdown-item">
-                        <input type="checkbox" name="CheckBoxList" value="Desktop Computers" data-category="Category 2" checked='@Model.CategoryString.Contains("Laptops")' />
+                        <input type="checkbox" name="CategoryString" value="Desktop Computers" data-category="Category 2" checked='@Model.CategoryString.Contains("Desktop Computers")' />
                         <label for="category2">Desktop Computers</label>
                     </div>
                     <div class="dropdown-item">
-                        <input type="checkbox" name="CheckBoxList" value="Tablets" data-category="Category 3" checked='@Model.CategoryString.Contains("Laptops")' />
+                        <input type="checkbox" name="CategoryString" value="Tablets" data-category="Category 3" checked='@Model.CategoryString.Contains("Tablets")' />
                         <label for="category3">Tablets</label>
                     </div>
                     <div class="dropdown-item">
-                        <input type="checkbox" name="CheckBoxList" value="Smartphones" data-category="Category 4" checked='@Model.CategoryString.Contains("Laptops")' />
+                        <input type="checkbox" name="CategoryString" value="Smartphones" data-category="Category 4" checked='@Model.CategoryString.Contains("Smartphones")' />
                         <label for="category4">Smartphones</label>
                     </div>
                     <div class="dropdown-item">
-                        <input type="checkbox" name="CheckBoxList" value="Audio Devices" data-category="Category 5" checked='@Model.CategoryString.Contains("Laptops")' />
+                        <input type="checkbox" name="CategoryString" value="Audio Devices" data-category="Category 5" checked='@Model.CategoryString.Contains("Audio Devices")' />
                         <label for="category5">Audio Devices</label>
                     </div>
                     <!-- Add more categories as needed -->
@@ -146,7 +147,7 @@
     <!-- Hidden Fields -->
     <input type="hidden" asp-for="Product.Id" />
     <input type="hidden" asp-for="Product.Category" value="DefaultValueForCategory" />
-    <input type="hidden" asp-for="Product.linkImg" value="DefaultValueForLinkImg" />
+    <input type="hidden" asp-for="Product.linkImg" value="@Model.Product.linkImg" />
     <input type="hidden" asp-for="Product.CreateAt" value="@DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss")" />
 </form>
 
