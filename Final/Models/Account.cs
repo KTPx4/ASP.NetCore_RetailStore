@@ -24,6 +24,7 @@ namespace Final.Models
         
        
         public bool firstLogin { get; set; }
-
+        public String AgentID { get; set; }
+        public String NameAvt { get; set; }
     }
 }

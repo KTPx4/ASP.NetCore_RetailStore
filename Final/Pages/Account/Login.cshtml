@@ -1,0 +1,66 @@
+﻿@page
+@model LoginModel
+@{
+    Layout = null;
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="~/css/account/login.css" />
+    
+    <!-- Add any additional head elements as needed -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Final.styles.css" asp-append-version="true" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<div class="container">
+    <div class="screen">
+        <div class="screen__content">           
+           
+            <form id="FormLogin" class="login" method="post" asp-route-handler="Login">                    
+               
+                @* loading  *@
+              
+                <div id="loading" class="text-center sniping d-none">
+                    <div class="spinner-border text-info" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+               
+                @* form input  *@
+                <div class="login__field">
+                    <i class="login__icon fas fa-user"></i>
+                    <input value="@Model.UserName" id="i-UserName" name="user" type="text" class="login__input" placeholder="User name / Email" />
+                </div>
+                <div class="login__field">
+                    <i class="login__icon fas fa-lock"></i>
+                    <input value="@Model.Password" id="i-Password" name="password" class="login__input" placeholder="Password" />
+                    <i id="showPass" class="fas fa-eye"></i>
+                </div> 
+
+                @* Error *@
+                @if(Model.ErrorMess != null )
+                {
+                    <div id="ErrMess" class="alert alert-warning" role="alert">
+                        @Model.ErrorMess
+                    </div>
+                }
+                <button type="submit" class="button login__submit">
+                    <span class="button__text">Log In Now</span>
+                    <i class="button__icon fas fa-chevron-right"></i>
+                </button>
+            </form>
+        </div>
+        <div class="screen__background">
+            <span class="screen__background__shape screen__background__shape1"></span>
+        </div>
+    </div>
+</div>
+<script src="~/js/account/login.js"></script>
+
+
