@@ -9,7 +9,9 @@
 
 @*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
    @*  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
-   
+        
+
+@*          cái link style của phần product lẫn cái style dùng để hiện lên thông báo trên cái product khi delelete *@
         <link rel="stylesheet" type="text/css" href="~/css/ProductCard.css" /> 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
     
@@ -58,6 +60,7 @@
 
     <div class="container">
         <main role="main" class="pb-3">
+           @*  cái này sẽ cho sử dụng chức năng thông báo ở mọi page *@
             <partial name="_Notification" />
             @RenderBody()
         </main>
@@ -91,9 +94,8 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
-     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+  
+  
     
     @await RenderSectionAsync("Scripts", required: false)
 </body>
