@@ -1,0 +1,162 @@
+﻿@page
+@model Final.Pages.Customer_Page.IndexModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+
+    <!-- Include jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="..." crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="..." crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="..." crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container mt-4 mb-4">
+    <!-- Section 1: Header -->
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-3 text-center">
+            <h2 class="text-primary">Customer Information List</h2>
+        </div>
+        <div class="col-md-3 text-center">
+
+
+        </div>
+        <div class="col-md-6 text-center">
+            <!-- Search Bar -->
+            <form class="d-flex">
+        <input class="form-control me-2" type="search" name="search" value="@Model.search" placeholder="Search By Name" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">        <i class="bi bi-search"></i> </button>
+      </form>
+        </div>
+    </div>
+
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Full Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Action</th> <!-- New column for the button -->
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var customer in Model.Customers)
+            {
+                <tr>
+                    <td>@customer.fullName</td>
+                    <td>@customer.Phone</td>
+                    <td>@customer.Address</td>
+                    <td>
+                        <!-- Button in the new column -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal@(customer.Phone)">
+                            View
+                        </button>
+                    </td>
+                </tr>
+            }
+    </tbody>
+</table>
+
+    @foreach (var customer in Model.Customers)
+    {
+        <div class="modal fade" id="modal@(customer.Phone)" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg" style="max-height: 200vh;" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Customer Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Create a table to display customer details -->
+                        
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Total Payment</th>
+                                        <th>Payment Receive</th>
+                                            <th>MoneyExchange</th>
+                                                      <th>Creation Date</th>
+                                  
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var order in Model.GetOrdersByCustomerPhoneAsync(customer.Phone))
+                                {
+                                        <tr>
+                                            <td id="modalPhone"><a class="btn btn-warning" asp-page="./DetailOrder" asp-route-id="@order.Id" a>@order.Id</a></td>
+                                                
+                                            <td id="modalPhone">$@order.ToltalPayment</td>
+                                            <td id="modalFullName">$@order.MoneyGiven</td>
+                                            <td id="modalAddress">$@order.MoneyExchange</td>
+                                            <td id="modalAddress">@order.CreateAt</td>
+                                           
+                                        </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" style="max-height: 200vh;" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Customer Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Create a table to display customer details -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Phone</th>
+                            <th>Full Name</th>
+                            <th>Address</th>
+                            <th>Action</th> <!-- New column for the button -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="modalId"></td>
+                            <td id="modalPhone"></td>
+                            <td id="modalFullName"></td>
+                            <td id="modalAddress"></td>
+                            <td>
+                                <!-- Button in the new column -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-id="1">
+                                    Launch demo modal
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<!--

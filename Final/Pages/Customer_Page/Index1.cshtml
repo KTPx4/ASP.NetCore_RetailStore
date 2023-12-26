@@ -1,0 +1,30 @@
+﻿@page
+@model Final.Pages.Customer_Page.Index1Model
+
+@{
+    ViewData["Title"] = "My Page";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Current value: @Model.MyVariable</p>
+
+<form method="post">
+    <button type="submit" name="submitButton">Change Value</button>
+</form>
+
+@{
+    var _name = ViewData["name"]?.ToString() ?? "Guest"; // Initialize with a default value
+}
+
+<div>
+    <h1>Hello, @_name!</h1>
+    <button type="button" onclick="changeName()">Change Name</button>
+    <button type="button" onclick="location.href = '@Url.Action("MyAction", new { name = _name })'">Refresh</button>
+</div>
+
+<script>
+    function changeName() {
+        _name = "John Doe"; // Update the name
+    }
+</script>

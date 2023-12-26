@@ -41,7 +41,7 @@ namespace Final.Models
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
-
+        public DbSet<Customer> Customers { get; set; } // Add DbSet for Customer
         public MyDataContext(DbContextOptions<MyDataContext> options)
             : base(options)
         {
@@ -55,6 +55,7 @@ namespace Final.Models
             modelBuilder.Entity<Product>().ToCollection("products");
             modelBuilder.Entity<Order>().ToCollection("orders");
             modelBuilder.Entity<OrderDetail>().ToCollection("orderdetails");
+            modelBuilder.Entity<Customer>().ToCollection("customers");
         }
     }
 }

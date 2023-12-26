@@ -1,0 +1,733 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\.nuget\\packages\\bootstrap\\5.3.2\\contentFiles\\any\\any\\wwwroot\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Final.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Final.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231224221547450",
+      "PackagePath": "staticwebassets\\ProductImages"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231224222340790",
+      "PackagePath": "staticwebassets\\ProductImages"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231224222544294.PNG",
+      "PackagePath": "staticwebassets\\ProductImages\\20231224222544294.PNG"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231224225322384.png",
+      "PackagePath": "staticwebassets\\ProductImages\\20231224225322384.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231224230032656.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231224230032656.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231224230503549.png",
+      "PackagePath": "staticwebassets\\ProductImages\\20231224230503549.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231224231044729.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231224231044729.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225003709547.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225003709547.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225005432757.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225005432757.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225014948003.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225014948003.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225015342828.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225015342828.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225020809805.png",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225020809805.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225021034216.PNG",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225021034216.PNG"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225021158432.PNG",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225021158432.PNG"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225021406468.png",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225021406468.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225021919581.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225021919581.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225021943584.PNG",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225021943584.PNG"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225022217954.png",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225022217954.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225023458255.png",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225023458255.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225025639756.png",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225025639756.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225030018546.png",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225030018546.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225133505942.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225133505942.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225133532148.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225133532148.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225133856383.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225133856383.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225134241758.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225134241758.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225134520346.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225134520346.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225134532740.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225134532740.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225134736897.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225134736897.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231225135725621.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231225135725621.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\product1.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\product1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\product10.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\product10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\product2.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\product2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\product3.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\product3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\product4.jpg",
+      "PackagePath": "staticwebassets\\ProductImages\\product4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\css\\ProductCard.css",
+      "PackagePath": "staticwebassets\\css\\ProductCard.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\css\\account\\active.css",
+      "PackagePath": "staticwebassets\\css\\account\\active.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\css\\account\\admin.css",
+      "PackagePath": "staticwebassets\\css\\account\\admin.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\css\\account\\changepass.css",
+      "PackagePath": "staticwebassets\\css\\account\\changepass.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\css\\account\\forbidden.css",
+      "PackagePath": "staticwebassets\\css\\account\\forbidden.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\css\\account\\login.css",
+      "PackagePath": "staticwebassets\\css\\account\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\css\\account\\profile.css",
+      "PackagePath": "staticwebassets\\css\\account\\profile.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\css\\notfound.css",
+      "PackagePath": "staticwebassets\\css\\notfound.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\js\\account\\admin.js",
+      "PackagePath": "staticwebassets\\js\\account\\admin.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\js\\account\\changepass.js",
+      "PackagePath": "staticwebassets\\js\\account\\changepass.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\js\\account\\login.js",
+      "PackagePath": "staticwebassets\\js\\account\\login.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\js\\account\\profile.js",
+      "PackagePath": "staticwebassets\\js\\account\\profile.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\655eba80afc6908c17a65f93\\655eba80afc6908c17a65f93.jpg",
+      "PackagePath": "staticwebassets\\public\\account\\img\\655eba80afc6908c17a65f93\\655eba80afc6908c17a65f93.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\655ebb431818f3acac62c9de\\655ebb431818f3acac62c9de.jpg",
+      "PackagePath": "staticwebassets\\public\\account\\img\\655ebb431818f3acac62c9de\\655ebb431818f3acac62c9de.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\655ebccc687374f4530c4289\\655ebccc687374f4530c4289.jpg",
+      "PackagePath": "staticwebassets\\public\\account\\img\\655ebccc687374f4530c4289\\655ebccc687374f4530c4289.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\655edda725d6bdfcff27772c\\655edda725d6bdfcff27772c.jpg",
+      "PackagePath": "staticwebassets\\public\\account\\img\\655edda725d6bdfcff27772c\\655edda725d6bdfcff27772c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\6562c69e080358922ada16b4\\6562c69e080358922ada16b4.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\6562c69e080358922ada16b4\\6562c69e080358922ada16b4.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\6563ec43f4b59d187c4a133f\\6563ec43f4b59d187c4a133f.jpg",
+      "PackagePath": "staticwebassets\\public\\account\\img\\6563ec43f4b59d187c4a133f\\6563ec43f4b59d187c4a133f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\65657186e9936eb2b66519e2\\65657186e9936eb2b66519e2.jpg",
+      "PackagePath": "staticwebassets\\public\\account\\img\\65657186e9936eb2b66519e2\\65657186e9936eb2b66519e2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\656840c5821aceec76a6fe70\\656840c5821aceec76a6fe70.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\656840c5821aceec76a6fe70\\656840c5821aceec76a6fe70.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\6570909d10f1642233bcdc59\\6570909d10f1642233bcdc59.jpg",
+      "PackagePath": "staticwebassets\\public\\account\\img\\6570909d10f1642233bcdc59\\6570909d10f1642233bcdc59.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\65709374be2211a6aea27469\\65709374be2211a6aea27469.jpg",
+      "PackagePath": "staticwebassets\\public\\account\\img\\65709374be2211a6aea27469\\65709374be2211a6aea27469.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\657094e699c957beacd74e7b\\657094e699c957beacd74e7b.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\657094e699c957beacd74e7b\\657094e699c957beacd74e7b.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\65751199b6bbace1d9fd688a\\65751199b6bbace1d9fd688a.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\65751199b6bbace1d9fd688a\\65751199b6bbace1d9fd688a.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\6575120fb6bbace1d9fd6896\\6575120fb6bbace1d9fd6896.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\6575120fb6bbace1d9fd6896\\6575120fb6bbace1d9fd6896.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\65751557b6bbace1d9fd68cc\\65751557b6bbace1d9fd68cc.jpg",
+      "PackagePath": "staticwebassets\\public\\account\\img\\65751557b6bbace1d9fd68cc\\65751557b6bbace1d9fd68cc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\65757a348bd003ba0cdfdd18\\65757a348bd003ba0cdfdd18.jpg",
+      "PackagePath": "staticwebassets\\public\\account\\img\\65757a348bd003ba0cdfdd18\\65757a348bd003ba0cdfdd18.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\6577d3ce903c8b40916fd0a5\\6577d3ce903c8b40916fd0a5.jpg",
+      "PackagePath": "staticwebassets\\public\\account\\img\\6577d3ce903c8b40916fd0a5\\6577d3ce903c8b40916fd0a5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\658074e77970f5c78d36b62c\\658074e77970f5c78d36b62c.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\658074e77970f5c78d36b62c\\658074e77970f5c78d36b62c.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\65807b605ee6914789b6cef5\\65807b605ee6914789b6cef5.jpg",
+      "PackagePath": "staticwebassets\\public\\account\\img\\65807b605ee6914789b6cef5\\65807b605ee6914789b6cef5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\65854c6d712349e3de10366b\\65854c6d712349e3de10366b.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\65854c6d712349e3de10366b\\65854c6d712349e3de10366b.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\6588e817ae23cdb3db74e55e\\6588e817ae23cdb3db74e55e.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\6588e817ae23cdb3db74e55e\\6588e817ae23cdb3db74e55e.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\6588e826ae23cdb3db74e55f\\6588e826ae23cdb3db74e55f.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\6588e826ae23cdb3db74e55f\\6588e826ae23cdb3db74e55f.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\6588f13861028fe2f7d4b59a\\6588f13861028fe2f7d4b59a.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\6588f13861028fe2f7d4b59a\\6588f13861028fe2f7d4b59a.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\6588f2e8e33a82d777d6a54b\\6588f2e8e33a82d777d6a54b.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\6588f2e8e33a82d777d6a54b\\6588f2e8e33a82d777d6a54b.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\6588f92d3e4cd8ac657a4e2a\\6588f92d3e4cd8ac657a4e2a.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\6588f92d3e4cd8ac657a4e2a\\6588f92d3e4cd8ac657a4e2a.png"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\6589480569d5780f87a816d2\\6589480569d5780f87a816d2.jpg",
+      "PackagePath": "staticwebassets\\public\\account\\img\\6589480569d5780f87a816d2\\6589480569d5780f87a816d2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\user.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\user.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Final.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Final.props",
+      "PackagePath": "build\\Final.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Final.props",
+      "PackagePath": "buildMultiTargeting\\Final.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Final.props",
+      "PackagePath": "buildTransitive\\Final.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

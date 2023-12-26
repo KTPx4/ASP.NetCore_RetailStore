@@ -1,0 +1,121 @@
+﻿
+@page
+@model Final.Pages.Customer_Page.DetailOrderModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta char
+        set="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- First Section: Left and Right -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Left Side -->
+            <div class="col-md-6">
+                <h1>Purchase Order</h1>
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-md-6">
+                <dl class="row">
+                    <dt class="col-sm-3">Order ID:</dt>
+                    <dd class="col-sm-9">@Model.Order.Id</dd>
+                    <dt class="col-sm-3">Creation Date:</dt>
+                    <dd class="col-sm-9">@Model.Order.CreateAt</dd>
+                    <!-- Add other customer details as needed -->
+                </dl>
+            </div>
+        </div>
+    </div>
+<!-- Second Section: Customer Information and Employee Details -->
+<div class="container mt-4">
+    <div class="row">
+        <!-- Left Side (Employee Details) -->
+        <div class="col-md-6">
+            <h2>Staff Information</h2>
+            <dl class="row">
+                <dt class="col-sm-3">Email:</dt>
+                <dd class="col-sm-9">@Model.Account.Email</dd>
+                <dt class="col-sm-3">Money Exchange:</dt>
+                <dd class="col-sm-9">$@Model.Order.MoneyExchange</dd>
+                <dt class="col-sm-3">Money Given:</dt>
+                <dd class="col-sm-9">$@Model.Order.MoneyGiven</dd>
+                <dt class="col-sm-3">Total Payment:</dt>
+                <dd class="col-sm-9">$@Model.Order.ToltalPayment</dd>
+                <!-- Add other account details as needed -->
+            </dl>
+        </div>
+
+        <!-- Right Side (Customer Information) -->
+        <div class="col-md-6">
+            <h2>Customer Information</h2>
+            <dl class="row">
+                <dt class="col-sm-3">Customer ID:</dt>
+                <dd class="col-sm-9">@Model.Customer.Id</dd>
+                <dt class="col-sm-3">Phone:</dt>
+                <dd class="col-sm-9">@Model.Customer.Phone</dd>
+                <dt class="col-sm-3">Full Name:</dt>
+                <dd class="col-sm-9">@Model.Customer.fullName</dd>
+                <dt class="col-sm-3">Address:</dt>
+                <dd class="col-sm-9">@Model.Customer.Address</dd>
+                <!-- Add other customer details as needed -->
+            </dl>
+        </div>
+    </div>
+</div>
+
+<!-- Third Section: Order Details Table -->
+<div class="container mt-4">
+    <h2>Order Details</h2>
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Product Image</th>
+                    <th>Bar Code ID</th>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                    <th>Total Price</th>
+                    <!-- Add other columns as needed -->
+                </tr>
+            </thead>
+            <tbody>
+                    @foreach (var orderDetail in Model.OrderDetails)
+                    {
+                        var product = Model.GetProductByBarCode(orderDetail.BarCodeID);
+                        <tr>
+                            <!-- Add the product image URL if available -->
+                            <td>
+                                @if (product != null)
+                                {
+                                        <img src="@product.linkImg" alt="Product Image" class="img-thumbnail" width="100" height="100" />
+                                }
+                            </td>
+                            <td>@orderDetail.BarCodeID</td>
+                            <td>@product?.ProductName</td>
+                            <td>$@(product != null ? (orderDetail.TotalPrice / orderDetail.Quantity) : 0)</td>
+                            <td>@orderDetail.Quantity</td>
+                            <td>$@orderDetail.TotalPrice</td>
+                            <!-- Add other cells as needed -->
+                        </tr>
+                    }
+            </tbody>
+        </table>
+    </div>
+</div>
+   
+<div class="container mt-4">
+    <a asp-page="/Customer_Page/Index" class="btn btn-primary">Back to Index</a>
+</div>
+    <!-- Add other sections or elements as needed -->
+
+</body>
+</html>
