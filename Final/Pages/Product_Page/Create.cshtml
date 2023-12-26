@@ -26,11 +26,11 @@
             <span asp-validation-for="Product.ProductName" class="text-danger"></span>
         </div>
 
-        <div class="form-group">
+        @* <div class="form-group">
             <label asp-for="Product.OriginPrice" class="control-label"></label>
             <input asp-for="Product.OriginPrice" class="form-control" />
             <span asp-validation-for="Product.OriginPrice" class="text-danger"></span>
-        </div>
+        </div> *@
 
         <div class="form-group">
             <label asp-for="Product.DisplayPrice" class="control-label"></label>
@@ -43,6 +43,7 @@
       <input type="hidden" asp-for="Product.Category" value="DefaultValueForCategory" />
 <input type="hidden" asp-for="Product.linkImg" value="DefaultValueForLinkImg" />
 <input type="hidden" asp-for="Product.CreateAt" value="@DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss")" />
+<input type="hidden" asp-for="Product.OriginPrice" value=0 />
     <div class="col-md-6">
         <div class="form-group">
             <label asp-for="Product.Description" class="control-label"></label>
@@ -101,113 +102,12 @@
 
 @* 
 
-<form method="post">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-    <div class="col-md-6">
-        <div class="form-group mb-5 mx-2">
-            <label for="BarCode" class="control-label">Bar Code</label>
-            <input id="BarCode" asp-for="Product.BarCode" class="form-control" />
-        </div>
-
-        <div class="form-group mb-5 mx-2">
-            <label for="ProductName" class="control-label">Product Name</label>
-            <input id="ProductName" asp-for="Product.ProductName" class="form-control" />
-        </div>
-
-        <div class="form-group mb-5 mx-2">
-            <label for="OriginPrice" class="control-label">Origin Price</label>
-            <input id="OriginPrice" asp-for="Product.OriginPrice" class="form-control" />
-        </div>
-
-        <div class="form-group mb-5 mx-2">
-            <label for="DisplayPrice" class="control-label">Display Price</label>
-            <input id="DisplayPrice" asp-for="Product.DisplayPrice" class="form-control" />
-        </div>
-           <div class="col-md-6">
-        <div class="form-group mb-5 mx-2">
-            <label for="Description" class="control-label">Description</label>
-            <textarea id="Description" asp-for="Product.Description" class="form-control"></textarea>
-        </div>
-    </div>
-    </div>
-
- 
-
-    <div class="col-md-12 text-center mt-2">
-        <div class="form-group mx-auto">
-            <input type="submit" value="Create" class="btn btn-primary" />
-        </div>
-    </div>
-</form>
-
-<form method="post" class="row">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-    <div class="col-md-6">
-        <div class="form-group mb-5 mx-2">
-            <label for="BarCode" class="control-label">Bar Code</label>
-            <input id="BarCode" asp-for="Product.BarCode" class="form-control" />
-        </div>
-
-        <div class="form-group mb-5 mx-2">
-            <label for="ProductName" class="control-label">Product Name</label>
-            <input id="ProductName" asp-for="Product.ProductName" class="form-control" />
-        </div>
-
-        <div class="form-group mb-5 mx-2">
-            <label for="OriginPrice" class="control-label">Origin Price</label>
-            <input id="OriginPrice" asp-for="Product.OriginPrice" class="form-control" />
-        </div>
-
-        <div class="form-group mb-5 mx-2">
-            <label for="DisplayPrice" class="control-label">Display Price</label>
-            <input id="DisplayPrice" asp-for="Product.DisplayPrice" class="form-control" />
-        </div>
-    </div>
-
-    <div class="col-md-6">
-        <div class="form-group mb-5 mx-2">
-            <label for="Description" class="control-label">Description</label>
-            <textarea id="Description" asp-for="Product.Description" class="form-control"></textarea>
-        </div>
-
-        <div class="form-group col-md-12 mb-5 mx-2">
-            <label for="formFile" class="form-label mt-4">File Input</label>
-            <input class="form-control" type="file" id="formFile">
-        </div>
-
-        <div class="form-group mb-5 mx-2">
-            <label class="control-label">Category</label>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Select Categories
-                </button>
-                <div class="dropdown-menu" aria-labelledby="categoryDropdown">
-                    <div class="dropdown-item">
-                        <input type="checkbox" id="category1" name="Category" value="Category1" data-category="Category 1" />
-                        <label for="category1">Category 1</label>
-                    </div>
-                    <div class="dropdown-item">
-                        <input type="checkbox" id="category2" name="Category" value="Category2" data-category="Category 2" />
-                        <label for="category2">Category 2</label>
-                    </div>
-                    <!-- Add more categories as needed -->
-                </div>
-            </div>
-         </div>
-    </div>
-
-    <div class="col-md-12 text-center mt-2">
-        <div class="form-group mx-auto">
-            <input type="submit" value="Create" class="btn btn-primary" />
-        </div>
-    </div>
-</form>
 
  *@
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 }

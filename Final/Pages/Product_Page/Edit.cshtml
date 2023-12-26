@@ -5,53 +5,7 @@
 <h1>Edit Product</h1>
 <hr />
 
-        @* <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Product.Id" />
-            <div class="form-group">
-                <label asp-for="Product.BarCode" class="control-label"></label>
-                <input asp-for="Product.BarCode" class="form-control" />
-                <span asp-validation-for="Product.BarCode" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.ProductName" class="control-label"></label>
-                <input asp-for="Product.ProductName" class="form-control" />
-                <span asp-validation-for="Product.ProductName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.OriginPrice" class="control-label"></label>
-                <input asp-for="Product.OriginPrice" class="form-control" />
-                <span asp-validation-for="Product.OriginPrice" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.DisplayPrice" class="control-label"></label>
-                <input asp-for="Product.DisplayPrice" class="form-control" />
-                <span asp-validation-for="Product.DisplayPrice" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.Category" class="control-label"></label>
-                <input asp-for="Product.Category" class="form-control" />
-                <span asp-validation-for="Product.Category" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.Description" class="control-label"></label>
-                <input asp-for="Product.Description" class="form-control" />
-                <span asp-validation-for="Product.Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.linkImg" class="control-label"></label>
-                <input asp-for="Product.linkImg" class="form-control" />
-                <span asp-validation-for="Product.linkImg" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Product.CreateAt" class="control-label"></label>
-                <input asp-for="Product.CreateAt" class="form-control" />
-                <span asp-validation-for="Product.CreateAt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form> *@
+        
 <div asp-validation-summary="All"></div>
 <form method="post" class="row" enctype="multipart/form-data">
  <div class="col-md-12 text-center mb-4">
@@ -74,11 +28,11 @@
             <span asp-validation-for="Product.ProductName" class="text-danger"></span>
         </div>
 
-        <div class="form-group">
+       @*  <div class="form-group">
             <label asp-for="Product.OriginPrice" class="control-label"></label>
             <input asp-for="Product.OriginPrice" class="form-control" />
             <span asp-validation-for="Product.OriginPrice" class="text-danger"></span>
-        </div>
+        </div> *@
 
         <div class="form-group">
             <label asp-for="Product.DisplayPrice" class="control-label"></label>
@@ -149,6 +103,8 @@
     <input type="hidden" asp-for="Product.Category" value="DefaultValueForCategory" />
     <input type="hidden" asp-for="Product.linkImg" value="@Model.Product.linkImg" />
     <input type="hidden" asp-for="Product.CreateAt" value="@DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss")" />
+    <input type="hidden" asp-for="Product.OriginPrice" value=@Model.Product.OriginPrice />
+
 </form>
 
 
@@ -158,5 +114,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 }

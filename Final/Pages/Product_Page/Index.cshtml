@@ -52,8 +52,12 @@
                     <!-- List Group -->
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Barcode: @product.BarCode</li>
-                        <li class="list-group-item">Origin Price: @product.OriginPrice</li>
-                        <li class="list-group-item">Display Price: @product.DisplayPrice</li>
+                            <li class="list-group-item">Price: $@product.DisplayPrice</li>
+
+                        @if (Model.IsAdmin)
+                        {
+                            <li class="list-group-item">Origin Price: $@product.OriginPrice</li>
+                        }
                     </ul>
                         
 
@@ -93,19 +97,21 @@
                     </div>
 
                     <!-- Card Body with Links -->
+                    @if (Model.IsAdmin)
+                    {
                     <div class="card-body">
                             <div class="btn-group" role="group" aria-label="Item Actions">
                                     
-                        <a class="btn btn-info" asp-page="./Details" asp-route-id="@product.Id">Details</a>
+                       @*  <a class="btn btn-info" asp-page="./Details" asp-route-id="@product.Id">Details</a> *@
 
-                            @if (Model.IsAdmin)
-                            {
+                           
                                 <a class="btn btn-warning" asp-page="./Edit" asp-route-id="@product.Id">Edit</a>
                                 <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@product.Id">Delete</a>
-                            }
+                          
                            
                         </div>
                     </div>
+                    }
                 </div>
             </div>
         }
