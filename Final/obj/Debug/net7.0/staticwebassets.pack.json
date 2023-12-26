@@ -309,6 +309,18 @@
       "PackagePath": "staticwebassets\\ProductImages\\20231226125332075.jfif"
     },
     {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231226144043273.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231226144043273.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231226173652586.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231226173652586.jfif"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\20231226220935675.jfif",
+      "PackagePath": "staticwebassets\\ProductImages\\20231226220935675.jfif"
+    },
+    {
       "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\ProductImages\\product1.jpg",
       "PackagePath": "staticwebassets\\ProductImages\\product1.jpg"
     },
@@ -719,6 +731,10 @@
     {
       "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\6589480569d5780f87a816d2\\6589480569d5780f87a816d2.jpg",
       "PackagePath": "staticwebassets\\public\\account\\img\\6589480569d5780f87a816d2\\6589480569d5780f87a816d2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\658af058771e8602517e99fe\\658af058771e8602517e99fe.png",
+      "PackagePath": "staticwebassets\\public\\account\\img\\658af058771e8602517e99fe\\658af058771e8602517e99fe.png"
     },
     {
       "Id": "C:\\Users\\konod\\OneDrive\\Hình ảnh\\Desktop\\CodeV1\\FinalDotNet\\Final\\wwwroot\\public\\account\\img\\user.png",

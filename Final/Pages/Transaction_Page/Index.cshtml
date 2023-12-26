@@ -1,0 +1,135 @@
+﻿@page
+@model Final.Pages.Transaction_Page.IndexModel
+
+<!-- First Section: Search Bar and Title Card -->
+<div class="container mt-8">
+    <div class="row">
+        <!-- Search Bar (Right Side) -->
+        <div class="col-md-6 mb-0">
+            <h2>Product List</h2>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" name="search" value="@Model.search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit"><i class="bi bi-search"></i></button>
+            </form>
+        </div>
+
+        <!-- Title Card (Left Side) -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">Checkout List</h2>
+                    <p class="card-text">
+                        Welcome to the Checkout List, your personalized space for managing and finalizing your selected items.
+                        This section serves as a convenient hub where you can review and complete your purchase with ease.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+
+<!-- Second Section: Content Area -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="table-responsive" style="max-height: 500px;">
+                <table class="table table-fixed">
+                    <thead class="sticky-top">
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Product Barcode</th>
+                            <th>Product Price</th>
+                            <th>Add Product</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Add your product rows here -->
+                        @foreach (var product in Model.Product)
+                        {
+                                <tr>
+                                    <td><img src="@product.linkImg" alt="Product Image" width="100" height="80"></td>
+                                    <td>@product.ProductName</td>
+                                    <td>@product.BarCode</td>
+                                    <td>$@product.DisplayPrice</td>
+                                    <td>
+                                        <form method="post" asp-page-handler="Addorder">
+                                            <input type="hidden" name="barcode" id="numberInput" value=@product.BarCode />
+                                            <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-plus"></i></button>
+                                        </form>
+                                    </td>
+                                </tr>
+                        }
+                        <!-- Repeat for other products -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Right Section: Title Card and Table -->
+        <div class="col-md-6">
+            <!-- Title Card -->
+            <div class="card">
+                <div class="card-body mb-0">
+                    <h4 class="card-title">Total Amount Of Product: @Model.TotalProductQuantity()</h4>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">Total:</span>
+                        <input type="text" class="form-control" readonly value="@Model.SumProductPrice()" aria-describedby="basic-addon2">
+                        <form method="post" asp-page-handler="CheckOut" class="d-inline">
+                            <button class="btn btn-primary" type="submit">Checkout</button>
+                        </form>
+
+                        <!-- Clean Form -->
+                        <form method="post" asp-page-handler="ClearOrderList" class="d-inline">
+                            <button class="btn btn-success" type="submit"><i class="bi bi-eraser-fill"></i></button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Right Table: Transaction Details -->
+                <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+                    <table class="table table-fixed">
+                        <thead class="sticky-top">
+                            <tr>
+                                <th>STT</th>
+                                <th>Name of Product</th>
+                                <th>Price</th>
+                                <th>Amount</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Add your transaction rows here -->
+                            @foreach (var orderdetail in Model.OrderDetailList)
+                            {
+                                var product = @Model.GetProductByBarcodeAsync(orderdetail.BarCodeID);
+                                    <tr>
+                                        <td>1</td>
+                                        <td>@product.ProductName</td>
+                                        <td>$@product.DisplayPrice</td>
+                                        <td>@orderdetail.Quantity</td>
+                                        <td>$@orderdetail.TotalPrice</td>
+                                        <td>
+                                            <form method="post" asp-page-handler="Deleteorder">
+                                                <input type="hidden" name="barcode" id="numberInput" value=@product.BarCode />
+                                                <button type="submit" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
+                                            </form>
+                                            <form method="post" asp-page-handler="Addorder">
+                                                <input type="hidden" name="barcode" id="numberInput" value=@product.BarCode />
+                                                <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-plus"></i></button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                            }
+                            <!-- Repeat for other transactions -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
