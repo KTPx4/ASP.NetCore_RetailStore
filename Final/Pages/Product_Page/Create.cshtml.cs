@@ -66,7 +66,7 @@ namespace Final.Pages.Product_Page
               
                 Product.Category ??= Array.Empty<string>();
                 var existingProduct = await _context.Products
-            .FirstOrDefaultAsync(p => p.BarCode == Product.BarCode);
+                 .FirstOrDefaultAsync(p => p.BarCode == Product.BarCode);
 
                 if (existingProduct != null)
                 {
@@ -76,7 +76,7 @@ namespace Final.Pages.Product_Page
 
 
 
-
+                Product.OriginPrice = Product.DisplayPrice; 
                 Product.linkImg = _imageUtil.SaveImage(linkImgFileName,this.environment.WebRootPath);
                 Product.CreateAt = DateTime.Now; 
                 Product.Category = CategoryString.ToArray();

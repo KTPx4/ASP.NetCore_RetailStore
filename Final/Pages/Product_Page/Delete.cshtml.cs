@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -20,7 +17,7 @@ namespace Final.Pages.Product_Page
         }
 
         [BindProperty]
-      public Product Product { get; set; } = default!;
+        public Product Product { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(ObjectId id)
         {
@@ -35,7 +32,7 @@ namespace Final.Pages.Product_Page
             {
                 return NotFound();
             }
-            else 
+            else
             {
                 Product = product;
             }
@@ -48,16 +45,29 @@ namespace Final.Pages.Product_Page
             {
                 return NotFound();
             }
+
             var product = await _context.Products.FindAsync(id);
 
-            if (product != null)
+            if (product == null)
             {
-                Product = product;
-                _context.Products.Remove(Product);
-                await _context.SaveChangesAsync();
+                return NotFound();
             }
 
-            return RedirectToPage("./Index");
+            // Check if the product barcode is in any order details
+            bool isProductInOrder = await _context.OrderDetails.AnyAsync(od => od.BarCodeID == product.BarCode);
+
+            if (isProductInOrder)
+            {
+                TempData["error"] = "Product  is in a order ";
+                return RedirectToPage("Index");
+
+            }
+
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
+
+            TempData["success"] = "Product deleted successfully";
+            return RedirectToPage("Index");
         }
     }
 }

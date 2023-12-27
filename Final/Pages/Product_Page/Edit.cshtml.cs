@@ -82,9 +82,12 @@ namespace Final.Pages.Product_Page
                 ModelState.AddModelError("product.ImageFileName", "The image file name is required");
             }
 
+            if (linkImgFileName != null)
+            {
+                Product.linkImg = _imageUtil.SaveImage(linkImgFileName, environment.WebRootPath);
+            }
 
            
-            Product.linkImg = _imageUtil.SaveImage(linkImgFileName, environment.WebRootPath);
             Product.CreateAt = DateTime.Now;
             Product.Category = CategoryString.ToArray();
 

@@ -1,0 +1,61 @@
+﻿@page
+@model Final.Pages.Transaction_Page.TransactionModel
+@{
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-success">Checkout</h1>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <label for="customerPhoneNumber">Customer Phone Number:</label>
+                <input class="form-control" type="text"  id="customerPhoneNumber" name="customerPhoneNumber">
+
+       
+                <label for="customerName">Customer Name:</label>
+                <input class="form-control" type="text" id="customerName" name="customerName">
+
+                <label for="customerAddress">Customer Address:</label>
+                <input class="form-control" type="text" id="customerAddress" name="customerAddress">
+            </div>
+
+            <div class="col-md-6">
+                <label for="totalPrice">Total Price:</label>
+                <input class="form-control"  readonly type="text" id="totalPrice" name="totalPrice" value = "$">
+
+                <label for="customerInputPrice">Customer Input Price:</label>
+                <input class="form-control" type="text" id="customerInputPrice" name="customerInputPrice">
+
+                <label for="exchangePrice">Exchange Price:</label>
+                <input class="form-control" type="text" id="exchangePrice" name="exchangePrice">
+            </div>
+        </div>
+
+        <!-- Buttons Section -->
+        <div class="row mt-4">
+            <div class="col-6">
+                <!-- Return to Index Button -->
+                <a asp-page="/Transaction_Page/Index" class="btn btn-primary">Back to Customer</a>
+            </div>
+
+            <div class="col-6 text-end">
+                <!-- Checkout Button -->
+                <form method="post" >
+                    <button class="btn btn-primary" type="submit">Next</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

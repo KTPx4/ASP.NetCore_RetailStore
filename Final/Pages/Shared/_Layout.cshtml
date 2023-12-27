@@ -4,26 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="~/css/index.css" />
+@*     <link rel="stylesheet" type="text/css" href="~/css/index.css" /> *@
 
 
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="~/css/index.css" />
+@*     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+   @*  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
+        
 
-  @*   added bootstarp package start  *@
-     <link rel="stylesheet" href="~/css/ProductCard.css" asp-append-version="true" />
-       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">s
-
-
-        @* bootstarp javascript start  *@
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-@*  bootstarp javascript end *@
-    @*    added bootstarp package end  *@
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Final.styles.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+@*          cái link style của phần product lẫn cái style dùng để hiện lên thông báo trên cái product khi delelete *@
+        <link rel="stylesheet" type="text/css" href="~/css/ProductCard.css" /> 
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     
 </head>
 <body>
@@ -52,13 +43,23 @@
                          <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Product_Page/Index">ProductPage</a>
                         </li>
+                       
                           <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Product_Page/IndexModel2">pageTest</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Customer_Page/Index">Customer</a>
                         </li>
-
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Transaction_Page/Index">TransactionPage</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Transaction_Page/SourcePage">example</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Transaction_Page/Index1">example</a>
+                        </li>
+                         <a class="nav-link text-dark text-navbar" asp-area="" asp-page="/account/profile">Profile</a>
                       
                     </ul>
-                    <a class="nav-link text-dark text-navbar" asp-area="" asp-page="/account/profile">Profile</a>
+                   
 
                     <button class="btn-login" >
                         <a class="nav-link text-dark" asp-area="" asp-page="/account/login" asp-page-handler="Logout">LogOut</a>
@@ -70,6 +71,8 @@
 
     <div class="container">
         <main role="main" class="pb-3">
+           @*  cái này sẽ cho sử dụng chức năng thông báo ở mọi page *@
+            <partial name="_Notification" />
             @RenderBody()
         </main>
     </div>
@@ -102,6 +105,8 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
+  
+  
     
     @await RenderSectionAsync("Scripts", required: false)
 </body>
