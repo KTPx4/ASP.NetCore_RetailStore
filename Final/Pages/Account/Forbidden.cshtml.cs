@@ -9,7 +9,9 @@ namespace Final.Pages.Account
         public ActionResult OnGet()
         {
             String Role = HttpContext.User.FindFirst(ClaimTypes.Role)?.Value;
-            if(Role.ToLower().Contains("admin"))
+		
+
+			if (Role.ToLower().Contains("admin"))
             {
                 return Redirect("/");
             }

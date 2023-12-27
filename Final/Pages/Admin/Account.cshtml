@@ -21,7 +21,8 @@
 
 </head>
 
-<!-- Modal -->
+
+<!-- Modal Add-->
 <div id="myModal" class="modal">
 	<!-- Modal content -->
 	<div class="modal-content">
@@ -42,13 +43,51 @@
 			</div>
 			<div class="modal-foot d-flex justify-content-end" >
 				<button type="submit" id="modal-add-save" class="btn btn-success modal-add-btn">Add</button>
-				<button class="btn btn-warning close modal-add-btn">Close</button>
+				<button type="button" class="btn btn-warning close modal-add-btn">Close</button>
 			</div>
 
 		</form>
 	</div>
 </div>
 
+
+<!-- Modal Block-->
+<div id="ModalBlock" class="modal">
+	<!-- Modal content -->
+	<div class="modal-content">
+
+		<div class="modal-header d-flex justify-content-center">
+			<h4 class="text-center" id="text-modal-header">Create Employee</h4>		
+		</div>
+		<form method="post" asp-page-handler="BlockAccount" id="formBlock">
+			<input  type="hidden" id="accountId" name="accountId" />
+			<div class="mt-4"><p id="body-modalBlock">Do you want Block this Account?</p></div>
+			<div class="modal-foot d-flex justify-content-end">
+				<button type="submit" id="modal-block-save" class="btn btn-success modal-add-btn" >Yes</button>
+				<button id="modal-block-close" type="button" class="btn btn-warning close modal-add-btn">Close</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<!-- Modal Active-->
+<div id="ModalActive" class="modal">
+	<!-- Modal content -->
+	<div class="modal-content">
+
+		<div class="modal-header d-flex justify-content-center">
+			<h4 class="text-center" >Send Active</h4>
+		</div>
+		<form method="post" asp-page-handler="SendActive" id="formActuve">
+			<input type="hidden" id="accountIdActive" name="accountId" />
+			<div class="mt-4"><p id="body-modalBlock">Do you want Send Active Email this Account?</p></div>
+			<div class="modal-foot d-flex justify-content-end">
+				<button type="submit" id="modal-active-save" class="btn btn-success modal-add-btn">Yes</button>
+				<button id="modal-active-close" type="button" class="btn btn-warning close modal-add-btn">Close</button>
+			</div>
+		</form>
+	</div>
+</div>
 
 <div class="app">
 	<!-- Hiển thị thông báo lỗi nếu có -->
@@ -160,7 +199,7 @@
 					 @foreach (var account in Model.Accounts)
 					{
 						<div class="transfer">
-							<img class="transfer-logo" src="~/public/account/img/@account.Id.ToString()/@account.NameAvt" />
+							<img class="transfer-logo" src="~/public/account/img/@account.Id.ToString()/@account.NameAvt?t=@DateTime.Now.Ticks" />
 							@* <div class="transfer-logo">
 							</div> *@
 							<dl class="transfer-details">
@@ -178,7 +217,7 @@
 										@if (account.isDeleted)
 										{
 											<span class="text-danger">Blocked</span>
-										}
+										}	
 										else if (!account.isActive)
 										{
 											<span class="text-warning">Non-Active</span>
@@ -191,16 +230,18 @@
 								</div>
 							</dl>
 							<div class="transfer-account-action">
-								<button class="btn-action bg-primary">View</button>
-								<button class="btn-action bg-success">Send Mail</button>
+								<a asp-page ="../Account/Details" asp-route-id="@account?.Id"> 
+									<button class="btn-action bg-primary">View</button>
+								</a>
+								<button class="btn-action bg-success" onclick="setIdActive('@account?.Id')">Send Mail</button>
 								@if (account.isDeleted)
 								{
-									
-									<button class="btn-action btn-lock bg-light">UnBlock</button>
+
+									<button class="btn-action btn-lock bg-light" onclick="setAccountId('@account?.Id', true)">UnBlock</button>
 								}
 								else
 								{
-									<button class="btn-action btn-lock bg-warning">Block</button>
+									<button class="btn-action btn-lock bg-warning" onclick="setAccountId('@account?.Id', false)">Block</button>
 
 								}
 
@@ -216,3 +257,51 @@
 	</div>
 </div>
 
+<script>
+	function setAccountId(accountId, unBlocked) 
+	{
+		
+		document.getElementById('accountId').value = accountId;
+		document.getElementById('accountIdActive').value = accountId;
+
+		// var modal = document.getElementById('myModal');
+		var modalBlock = document.getElementById('ModalBlock')
+		var closeB = document.getElementById('modal-block-close')
+
+		var header = document.getElementById('text-modal-header')
+		var body = document.getElementById('body-modalBlock')
+		if (unBlocked) 
+		{
+			header.innerHTML = "Unblock Account"
+			body.innerHTML = "Do you want Unblock Account?"
+
+		}
+		else 
+		{
+			header.innerHTML = "Block Account"
+			body.innerHTML = "Do you want Block Account?"
+		}
+
+		modalBlock.style.display = 'block';
+
+		closeB.onclick = function(){
+			modalBlock.style.display = 'none'
+		}
+	}
+	function setIdActive(accountId) {
+
+	
+		document.getElementById('accountIdActive').value = accountId;
+
+		// var modal = document.getElementById('myModal');
+		var modalBlock = document.getElementById('ModalActive')
+		var closeB = document.getElementById('modal-active-close')
+
+		modalBlock.style.display = 'block';
+
+		closeB.onclick = function () {
+			modalBlock.style.display = 'none'
+		}
+	}
+
+</script>

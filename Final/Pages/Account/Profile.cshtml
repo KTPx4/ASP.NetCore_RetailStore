@@ -39,7 +39,7 @@
         <!-- here’s the avatar -->
         <div class="text-center mb-3">
             <label for="imageInput">
-                <img id="profileImagePreview" src="~/public/account/img/@ViewData["NameAvt"]?im=11" className="img hoverZoomLink" />
+                    <img id="profileImagePreview" src="~/public/account/img/@ViewData["NameAvt"]?t=@DateTime.Now.Ticks" className="img hoverZoomLink" />
             </label>
             <input id="imageInput"
                    type="file"

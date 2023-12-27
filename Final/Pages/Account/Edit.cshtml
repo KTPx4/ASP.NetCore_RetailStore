@@ -1,0 +1,123 @@
+﻿@page
+@model Final.Pages.Account.EditModel
+
+@{
+
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+    <link rel="stylesheet" type="text/css" href="~/css/account/details.css" />
+
+    <!-- Add any additional head elements as needed -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Final.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/js/account/edit.js"></script>
+</head>
+<div class="container text-center">
+
+
+    <h1 class="text-info">Edit</h1>
+
+    <h4 class="text-light">Account</h4>
+    <hr />
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-4 text-light">
+            <form method="post" class="text-lg-start" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="EditAccount.Id" />
+                <div class="d-flex justify-content-center" >
+                    <label for="imageInput">
+                        <img id="profileImagePreview" src="~/public/account/img/@Model.EditAccount.Id.ToString()/@Model.EditAccount.NameAvt?t=@DateTime.Now.Ticks" className="img hoverZoomLink" />
+
+                    </label>
+                    <input id="imageInput"
+                           type="file"
+                           accept="image/*"
+                           name="profileImage" 
+                           asp-for="profileImage"
+                          
+                    />
+           
+                </div>
+
+                <div class="form-group m-2">
+                    <label for="d-email" class="control-label"></label>
+                    <input id="d-email" value="@Model.EditAccount.Email" class="form-control" disabled />
+                
+                </div>
+                <div class="form-group m-2">
+                    <label asp-for="EditAccount.FullName" class="control-label">Full Name</label>
+                    <input asp-for="EditAccount.FullName" class="form-control" />
+                    <span asp-validation-for="EditAccount.FullName" class="text-danger"></span>
+                </div>
+              
+   @*              <div class="form-group">
+                    <label asp-for="Account.Email" class="control-label"></label>
+                    <input asp-for="Account.Email" class="form-control" />
+                    <span asp-validation-for="Account.Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Account.Password" class="control-label"></label>
+                    <input asp-for="Account.Password" class="form-control" />
+                    <span asp-validation-for="Account.Password" class="text-danger"></span>
+                </div> *@
+                <div class="form-group">
+                    <label asp-for="EditAccount.User" class="control-label"></label>
+                    <input asp-for="EditAccount.User" class="form-control" />
+                    <span asp-validation-for="EditAccount.User" class="text-danger"></span>
+                </div>
+               
+                <div class="form-group m-2">
+                    <label asp-for="EditAccount.Role" class="control-label"></label>
+                    <input asp-for="EditAccount.Role" class="form-control" />
+                    <span asp-validation-for="EditAccount.Role" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check m-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="EditAccount.IsActive" /> @Html.DisplayNameFor(model => model.EditAccount.IsActive)
+                    </label>
+                </div>
+                <div class="form-group form-check m-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="EditAccount.IsDeleted" /> @Html.DisplayNameFor(model => model.EditAccount.IsDeleted)
+                    </label>
+                </div>
+                <div class="form-group form-check m-2">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="EditAccount.FirstLogin" /> @Html.DisplayNameFor(model => model.EditAccount.FirstLogin)
+                    </label>
+                </div>
+                <div class="form-group m-2">
+                    <label asp-for="EditAccount.AgentID" class="control-label"></label>
+                    <input asp-for="EditAccount.AgentID" class="form-control" />
+                    <span asp-validation-for="EditAccount.AgentID" class="text-danger"></span>
+                </div>
+                @* <div class="form-group m-2">
+                    <label asp-for="EditAccount.NameAvt" class="control-label"></label>
+                    <input asp-for="EditAccount.NameAvt" class="form-control" />
+                    <span asp-validation-for="EditAccount.NameAvt" class="text-danger"></span>
+                </div> *@
+                <div class="button-click mt-3">
+                    <div class="form-group m-2">
+                        <input type="submit" value="Save" class="btn btn-outline-info float-lg-start me-3" />
+                    </div>
+                    <div>
+                        <a asp-page="../admin/account"><button type="button" class="btn btn-outline-light">Back to List</button></a>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+   
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

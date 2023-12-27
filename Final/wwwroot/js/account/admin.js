@@ -8,23 +8,28 @@ $(document).ready(()=>{
     }, 2600)
 
     var modal = document.getElementById('myModal');
-
+    var modalBlock =$('#ModalBlock')
     // Lấy nút mở modal
     var btn = document.querySelector('.filter-options button.bg-success');
+ 
 
     // Lấy nút đóng modal
     var span = document.getElementsByClassName('close')[0];
+   
+
 
     // Khi người dùng nhấn nút, mở modal
     btn.onclick = function () {
-    modal.style.display = 'block';
+        modal.style.display = 'block';
     };
 
     // Khi người dùng nhấn vào nút đóng, đóng modal
     span.onclick = function () {
-    modal.style.display = 'none';
+        modal.style.display = 'none';
     };
+
    
+
     $('#i-name').on('click',()=> {
         $('#modal-add-err').addClass('d-none')
     })
