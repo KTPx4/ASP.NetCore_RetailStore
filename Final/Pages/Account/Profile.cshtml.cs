@@ -83,7 +83,7 @@ namespace Final.Pages.Account
             // For more details, see https://aka.ms/RazorPagesCRUD.
             public async Task<ActionResult> OnPost(String fullName,String oldPass, String newPass, IFormFile profileImage)
             {
-                Console.WriteLine("IMG: "+profileImage);
+              
                if(fullName == null || fullName == "")
                {
 

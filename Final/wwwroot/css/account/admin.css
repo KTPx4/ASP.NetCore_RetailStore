@@ -48,6 +48,7 @@ html {
 	 font: inherit;
 }
  a {
+	 text-decoration: none;
 	 color: inherit !important;
 }
  .responsive-wrapper {
@@ -819,6 +820,16 @@ html {
 	padding: 20px;
 
 	width: 25%;
+  }
+  #ModalBlock .modal-content {
+	background-color: #414141;
+    border-radius: 9px;
+    border: 1px solid #b5b5b5;
+
+	margin: 15% auto;
+	padding: 20px;
+
+	width: 33%;
   }
   
   /* Close button */

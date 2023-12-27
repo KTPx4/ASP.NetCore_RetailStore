@@ -1,0 +1,105 @@
+﻿@page
+@model Final.Pages.Account.DetailsModel
+
+@{
+
+ 
+}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" type="text/css" href="~/css/account/details.css" />
+
+    <!-- Add any additional head elements as needed -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Final.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<div class="container text-center">
+
+    <h1 class="text-info">Details</h1>
+
+    <div class="text-light">
+        <h4>Account</h4>
+        <hr />
+        <img id="profileImagePreview" src="~/public/account/img/@Model.Account.Id.ToString()/@Model.Account.NameAvt?t=@DateTime.Now.Ticks" className="mb-3 img hoverZoomLink" />
+        <div class="mt-3 info d-flex justify-content-center">
+            <dl class="row list-info-details">
+                <dt class="col-sm-2">
+                   ID
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Account.Id)
+                </dd>
+            <dt class="col-sm-2">
+              Full Name
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Account.fullName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Account.Email)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Account.Email)
+            </dd>  
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Account.User)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Account.User)
+            </dd>
+            <dt class="col-sm-2">
+                Role
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Account.Role)
+            </dd>
+            <dt class="col-sm-2">
+                Has Active Account
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Account.isActive)
+            </dd>
+            <dt class="col-sm-2">
+               Has Blocked
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Account.isDeleted)
+            </dd>
+            <dt class="col-sm-2">
+               First Login
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Account.firstLogin)
+            </dd>
+            <dt class="col-sm-2">
+               Id Agent
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Account.AgentID)
+            </dd>
+            <dt class="col-sm-2">
+                Name Image
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Account.NameAvt)
+            </dd>
+        </dl>
+
+        </div>
+    </div>
+    <div>
+        <a asp-page="./Edit" asp-route-id="@Model.Account?.Id" class="m-3   ">
+            <button class="btn btn-outline-info">Edit</button>
+        </a> 
+        <a asp-page="../Admin/Account">
+            <buttonn class="btn btn-outline-light">Back to List</buttonn>
+        </a>
+    </div>
+</div>
+
