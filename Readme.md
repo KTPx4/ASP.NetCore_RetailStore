@@ -6,6 +6,24 @@ ASP.NetCore_RetailStore is a web application designed as a **Point of Sale (POS)
 
 This project was developed as part of the **Web Programming with Node.js** final project for **Semester 1/2023-2024**.
 
+## Technologies Used
+### **Backend**
+- **ASP.NET Core with Razor Pages**: Provides the server-side logic and dynamic UI rendering.
+- **MongoDB**: NoSQL database for storing products, customers, and transaction data.
+- **ASP.NET Identity & JWT Authentication**: Secure login and user authentication.
+- **SMTP (MailKit)**: Sends automated emails for account notifications.
+
+### **Frontend**
+- **Razor Pages**: Implements a simple yet powerful UI framework within ASP.NET Core.
+- **Bootstrap / Tailwind CSS**: Enhances UI design and responsiveness.
+
+### **Additional Tools & Services**
+- **Entity Framework Core (MongoDB Provider)**: Manages database operations.
+- **AutoMapper**: Simplifies object mapping between models and DTOs.
+- **Serilog**: Implements structured logging.
+- **Docker**: Containerization for deployment.
+
+
 ## Features
 
 ### **Account Management**
@@ -43,23 +61,6 @@ This project was developed as part of the **Web Programming with Node.js** final
 - View sales reports by predefined periods (today, last 7 days, this month, custom date range).
 - Display key metrics: total sales, number of orders, products sold.
 - Admin can see **profit calculations**.
-
-## Technologies Used
-### **Backend**
-- **ASP.NET Core with Razor Pages**: Provides the server-side logic and dynamic UI rendering.
-- **MongoDB**: NoSQL database for storing products, customers, and transaction data.
-- **ASP.NET Identity & JWT Authentication**: Secure login and user authentication.
-- **SMTP (MailKit)**: Sends automated emails for account notifications.
-
-### **Frontend**
-- **Razor Pages**: Implements a simple yet powerful UI framework within ASP.NET Core.
-- **Bootstrap / Tailwind CSS**: Enhances UI design and responsiveness.
-
-### **Additional Tools & Services**
-- **Entity Framework Core (MongoDB Provider)**: Manages database operations.
-- **AutoMapper**: Simplifies object mapping between models and DTOs.
-- **Serilog**: Implements structured logging.
-- **Docker**: Containerization for deployment.
 
 ## Installation
 
